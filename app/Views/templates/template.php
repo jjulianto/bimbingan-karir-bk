@@ -19,47 +19,57 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style.css">
 
+    <!-- Custom fonts-->
+    <link href="<?= base_url(); ?>/assets-dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles-->
+    <link href="<?= base_url(); ?>/assets-dashboard/css/sb-admin-2.min.css" rel="stylesheet">
+
+
     <title><?= $title; ?></title>
 </head>
 
-<body>
+<body id="page-top">
 
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <?= $this->include('templates/sidebar'); ?>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-    <!-- Content -->
-    <?= $this->renderSection('content'); ?>
-
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Navbar -->
+                <?= $this->include('templates/navbar'); ?>
+                <?= $this->renderSection('content'); ?>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- <script src="/assets/js/main.js" type="text/javascript"></script> -->
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?= base_url(); ?>/assets-dashboard/more/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url(); ?>/assets-dashboard/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="<?= base_url(); ?>/assets-dashboard/more/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="<?= base_url(); ?>/assets-dashboard/js/demo/chart-area-demo.js"></script>
+    <script src="<?= base_url(); ?>/assets-dashboard/js/demo/chart-pie-demo.js"></script>
     <script>
         AOS.init();
     </script>
     <script>
-        function scrollFunction() {
-            let e = document.getElementById("el1");
-            e.scrollIntoView({
-                block: 'start',
-                behavior: 'smooth',
-                inline: 'start'
-            });
-        }
-
-        $(function() {
-            var navbar = $('.navbar');
-
-            $(window).scroll(function() {
-                if ($(window).scrollTop() <= 40) {
-                    navbar.removeClass('add-shadow');
-                } else {
-                    navbar.addClass('add-shadow');
-                }
-            });
-        });
-
         $(".toggle-password").click(function() {
 
             $(this).toggleClass("fa-eye fa-eye-slash");

@@ -1,4 +1,4 @@
-<?= $this->extend('templates/template'); ?>
+<?= $this->extend('templates/template-login'); ?>
 
 <?= $this->section('content'); ?>
 <!-- Content -->
