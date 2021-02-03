@@ -24,7 +24,7 @@ html {
 }
 
 .modal-header h5 {
-  color: rgb(16, 82, 158);
+  color: rgb(4, 121, 255);
   font-size: 15px;
 }
 
@@ -95,7 +95,7 @@ html {
   color: rgb(4, 121, 255);
 }
 
-input {
+.input-login {
   border-radius: 0;
   border: 0 solid black !important;
   width: 100%;
@@ -103,25 +103,25 @@ input {
 }
 
 .icon,
-input {
+.input-login {
   border-bottom: 2px solid #d1d1d1 !important;
   border-radius: 0 !important;
 }
 
-input:focus {
+.input-login:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
   border-bottom: 2px solid rgb(4, 121, 255) !important;
   transition: 0.4;
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input-login::-webkit-outer-spin-button,
+.input-login::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
 /* Firefox */
-input[type="number"] {
+.input-login[type="number"] {
   -moz-appearance: textfield;
 }
 

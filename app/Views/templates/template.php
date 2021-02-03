@@ -20,12 +20,13 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style.css">
 
     <!-- Custom fonts-->
-    <link href="<?= base_url(); ?>/assets-dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets-dashboard/more/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 
     <!-- Custom styles-->
     <link href="<?= base_url(); ?>/assets-dashboard/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="<?= base_url(); ?>/assets-dashboard/more/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <title><?= $title; ?></title>
 </head>
@@ -47,6 +48,10 @@
             </div>
         </div>
     </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -62,10 +67,13 @@
 
     <!-- Page level plugins -->
     <script src="<?= base_url(); ?>/assets-dashboard/more/chart.js/Chart.min.js"></script>
+    <script src="<?= base_url(); ?>/assets-dashboard/more/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url(); ?>/assets-dashboard/more/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="<?= base_url(); ?>/assets-dashboard/js/demo/chart-area-demo.js"></script>
     <script src="<?= base_url(); ?>/assets-dashboard/js/demo/chart-pie-demo.js"></script>
+    <script src="<?= base_url(); ?>/assets-dashboard/js/demo/datatables-demo.js"></script>
     <script>
         AOS.init();
     </script>

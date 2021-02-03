@@ -18,7 +18,7 @@
                     </div>
                     <div class="input-icon mt-2">
                         <i class="fa fa-user icon"></i>
-                        <input type="text" class="form-control" name="email" autocomplete="off" required placeholder="Email">
+                        <input type="text" class="form-control input-login" name="username" autocomplete="off" required placeholder="Username">
                     </div>
                     <div class="input-icon invalid-feedback col-12" id="status">
                         Mohon pilih status anda!
@@ -26,7 +26,7 @@
 
                     <div class="input-icon mt-1">
                         <i class="fa fa-lock icon"></i>
-                        <input type="password" class="form-control" name="password" autocomplete="off" required placeholder="Password" id="password-field">
+                        <input type="password" class="form-control input-login" name="password" autocomplete="off" required placeholder="Password" id="password-field">
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                     </div>
                     <div class="input-icon invalid-feedback col-12" id="status">
