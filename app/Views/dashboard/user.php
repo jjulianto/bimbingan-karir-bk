@@ -9,12 +9,12 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <i class="fas fa-chart-bar mr-1"></i>
+            <i class="fas fa-user mr-1"></i>
             <span><?= $user; ?></span>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -82,4 +82,18 @@
 
 </div>
 <!-- /.container-fluid -->
+<?= $this->endSection(); ?>
+<?= $this->extend('templates/template'); ?>
+
+<?= $this->section('more-js'); ?>
+<script>
+    $('#dataTable').dataTable({
+        "language": {
+            "paginate": {
+                "previous": '&#8592',
+                "next": '&#8594'
+            }
+        }
+    });
+</script>
 <?= $this->endSection(); ?>

@@ -70,6 +70,7 @@ table.dataTable > thead > tr > th:active,
 table.dataTable > thead > tr > td:active {
   outline: none;
 }
+
 table.dataTable > thead > tr > th:not(.sorting_disabled),
 table.dataTable > thead > tr > td:not(.sorting_disabled) {
   padding-right: 30px;
@@ -120,6 +121,24 @@ table.dataTable > thead .sorting_desc:after {
 table.dataTable > thead .sorting_asc_disabled:before,
 table.dataTable > thead .sorting_desc_disabled:after {
   opacity: 0;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #fafbfc;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #fff;
+}
+
+table#dataTable.dataTable tbody tr:nth-child(even):hover td {
+  background-color: #f5f6f6;
+}
+
+table#dataTable.dataTable tbody tr:nth-child(odd):hover td {
+  background-color: #fafbfc;
 }
 
 div.dataTables_scrollHead table.dataTable {
