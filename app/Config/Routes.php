@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Login::login');
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/list-siswa', 'User::siswa');
+$routes->get('/riwayat-konsultasi', 'Konsultasi::index');
 
 /**
  * --------------------------------------------------------------------

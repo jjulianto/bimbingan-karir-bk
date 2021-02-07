@@ -10,6 +10,10 @@ body {
   overflow-y: scroll;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -141,6 +145,56 @@ html {
   margin: auto;
   margin-top: -50px;
   text-align: center;
+}
+
+.card-konten {
+  padding: 0 6%;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card-konten:hover {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.item {
+  display: inline-block;
+}
+.featured-image {
+  float: left;
+  width: 40%;
+}
+.featured-image img {
+  margin-top: 20px;
+  margin-left: 5px;
+  width: 75%;
+  border-radius: 50%;
+}
+.description {
+  margin-top: 18px;
+  float: left;
+  width: 55%;
+}
+.status {
+  padding: 7px 10px 7px 10px !important;
+}
+
+/* on Mobile */
+@media screen and (max-width: 550px) {
+  .featured-image {
+    width: 100%;
+  }
+  .featured-image img {
+    width: 50%;
+  }
+  .description {
+    width: 97%;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 992px) {

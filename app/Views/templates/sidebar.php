@@ -33,9 +33,9 @@
 
     <!-- Nav Item - Konsultasi -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="/riwayat-konsultasi">
             <i class="fas fa-fw fa-comment"></i>
-            <span>Menu Konsultasi</span></a>
+            <span>Konsultasi Anda</span></a>
     </li>
 
     <!-- Divider -->
