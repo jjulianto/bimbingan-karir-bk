@@ -1,7 +1,3 @@
-/* FONT IMPORT */
-
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
 body {
   padding: 0;
   margin: 0;
@@ -18,32 +14,196 @@ html {
   scroll-behavior: smooth;
 }
 
-.modal-login .modal-content {
+.modal-login,
+#loginContent {
   border-radius: 20px;
 }
 
-.modal-header,
-.modal-footer {
+#loginHeader {
   display: inline-block !important;
+  text-align: center;
 }
 
-.modal-header h5 {
+#loginHeader h5 {
   color: rgb(4, 121, 255);
   font-size: 15px;
 }
 
-.modal-header button {
+#loginHeader button {
   position: absolute;
   top: 17px;
   right: 17px;
 }
 
-.modal-body p {
+#loginBody {
+  text-align: center;
+}
+
+#loginBody p {
   color: gray;
 }
 
-.modal-body button {
+#loginBody button {
   width: 200px;
+}
+
+/* Modal Konsultasi */
+.modal-konsultasi {
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  font-size: 12px !important;
+}
+
+img .profile {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#konsultasiHeader {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 10%;
+  border: none;
+  display: inline-block !important;
+  background-color: rgb(4, 121, 255);
+}
+
+.msg-header-img {
+  border-radius: 50%;
+  width: 40px;
+  margin-top: 12px;
+  margin-left: 5%;
+  float: left;
+}
+
+.active {
+  float: left;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.active p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.header-icons {
+  width: 60px;
+  float: right;
+  margin-top: 15px;
+}
+
+.header-icons .fas {
+  color: #fff;
+  cursor: pointer !important;
+  margin: 10px !important;
+}
+
+#konsultasiBody {
+  padding: 0 0 50px 0;
+}
+
+.msg-inbox {
+  overflow: hidden;
+}
+
+.chats {
+  padding: 30px 15px 0 25px;
+}
+
+.msg-page {
+  height: 380px;
+  overflow-y: auto;
+}
+
+.received-chats-img {
+  display: inline-block;
+  width: 20px;
+  float: left;
+}
+
+.received-msg {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+
+.received-msg-inbox {
+  width: 57%;
+}
+
+.received-msg-inbox p {
+  background: #efefef none repeat scroll 0 0;
+  text-align: left;
+  border-radius: 10px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+
+.outgoing-chats {
+  overflow: hidden;
+  margin: 26px 20px;
+}
+
+.outgoing-msg-inbox p {
+  background: rgb(4, 121, 255) none repeat scroll 0 0;
+  text-align: left;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+
+.outgoing-msg-inbox {
+  float: left;
+  width: 46%;
+  margin-left: 46%;
+}
+
+.outgoing-chats-img {
+  display: inline-block;
+  width: 20px;
+  float: right;
+}
+
+#konsultasiFooter {
+  height: 10%;
+  background-color: rgb(4, 121, 255) !important;
+}
+
+.input-group {
+  margin-top: 13px;
+  outline: none !important;
+  border-radius: 20px;
+}
+
+.form-control {
+  border: none !important;
+  border-radius: 20px !important;
+}
+
+.input-group-text {
+  background: transparent !important;
+  border: none !important;
+}
+
+.input-group .fas {
+  color: #fff;
+  float: right;
+  cursor: pointer;
+}
+
+.form-control:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+  border-radius: 20px;
 }
 
 /* Login Page */
@@ -147,6 +307,12 @@ html {
   text-align: center;
 }
 
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  width: 100%;
+}
+
 .card-konten {
   padding: 0 6%;
   border-radius: 20px;
@@ -194,6 +360,16 @@ html {
     width: 97%;
     margin-bottom: 10px;
     margin-top: 0;
+  }
+  .modal-login,
+  .modal-konsultasi {
+    text-align: center !important;
+  }
+  #loginBody button {
+    width: 100px;
+  }
+  .msg-page {
+    height: 300px;
   }
 }
 
