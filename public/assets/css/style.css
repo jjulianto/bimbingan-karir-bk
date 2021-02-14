@@ -6,6 +6,28 @@ body {
   overflow-y: scroll;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(4, 121, 255);
+  border-radius: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(5, 110, 230); 
+}
+
 * {
   box-sizing: border-box;
 }
