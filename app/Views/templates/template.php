@@ -25,8 +25,8 @@
 
 
     <!-- Custom styles-->
-    <link href="<?= base_url(); ?>/assets-dashboard/css/sb-admin-2.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>/assets-dashboard/more/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets-dashboard/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets-dashboard/more/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <title><?= $title; ?></title>
 </head>

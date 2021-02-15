@@ -57,7 +57,7 @@
                 <div class="msg-header-img">
                     <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" class="profile" alt="Cool">
                 </div>
-                <div class="active">
+                <div class="name-profile">
                     <p>Senku Ishigami</p>
                 </div>
                 <div class="header-icons">
@@ -130,10 +130,10 @@
                 </div>
             </div>
             <div class="modal-footer" id="konsultasiFooter">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Tulis pesan disini...">
+                <div class="input-group" id="group">
+                    <input type="text" class="form-control" id="input-message" placeholder="Tulis pesan disini...">
                     <div class="input-group-append">
-                        <span class="input-group-text"><i class="fas fa-paper-plane"></i></span>
+                        <span class="input-group-text" id="group-text"><i class="fas fa-paper-plane"></i></span>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
         <div class="wrapper-form">
             <div class="circle-wrapper">
                 <div class="circle-image">
-                    <img src="<?= base_url(); ?>/assets/images/user.png" width="100">
+                    <img src="<?= base_url(); ?>/assets/images/Logo_BK-removebg-preview.png" width="100">
                 </div>
 
             </div>
@@ -16,7 +16,7 @@
                     <div class="text-center">
                         <label class="text-login text-uppercase">Login Form</label>
                     </div>
-                    <div class="input-icon mt-2">
+                    <div class="input-icon mt-1">
                         <i class="fa fa-user icon"></i>
                         <input type="text" class="form-control input-login" name="username" autocomplete="off" required placeholder="Username">
                     </div>

@@ -8,7 +8,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.25rem;
 }
 
 /* Track */
@@ -98,13 +98,13 @@ img .profile {
   float: left;
 }
 
-.active {
+.name-profile {
   float: left;
   width: 150px;
   margin-top: 20px;
 }
 
-.active p {
+.name-profile p {
   margin-left: 10px;
   font-size: 16px;
   color: #fff;
@@ -200,29 +200,29 @@ img .profile {
   background-color: rgb(4, 121, 255) !important;
 }
 
-.input-group {
+#group {
   margin-top: 13px;
   outline: none !important;
   border-radius: 20px;
 }
 
-.form-control {
+#input-message {
   border: none !important;
   border-radius: 20px !important;
 }
 
-.input-group-text {
+#group-text {
   background: transparent !important;
   border: none !important;
 }
 
-.input-group .fas {
+#group .fas {
   color: #fff;
   float: right;
   cursor: pointer;
 }
 
-.form-control:focus {
+#input-message:focus {
   border-color: none !important;
   box-shadow: none !important;
   border-radius: 20px;
@@ -301,13 +301,13 @@ img .profile {
 }
 
 /* Chrome, Safari, Edge, Opera */
-.input-login::-webkit-outer-spin-button,
-.input-login::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
 /* Firefox */
-.input-login[type="number"] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -370,6 +370,98 @@ a.custom-card:hover {
   padding: 7px 10px 7px 10px !important;
 }
 
+.button-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camera4 {
+  display: block;
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  background-color: #000;
+  border-radius: 5px;
+}
+.camera4:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 7px solid #fff;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  background-color: #000;
+  border-radius: 15px;
+}
+.camera4:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: -16%;
+  left: 25%;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+#profile-form {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+#profile-upload {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 160px;
+  border: 1px solid #bbb;
+  position: relative;
+  top: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 0px;
+}
+#profile-upload:hover input.upload {
+  display: block;
+}
+#profile-upload:hover {
+  border: 1px solid gray;
+}
+#profile-upload:hover .hvr-profile-img {
+  opacity: 1;
+}
+.hvr-profile-img {
+  opacity: 0.3;
+}
+
+#profile-upload input.upload {
+  z-index: 1;
+  left: 0;
+  margin: 0;
+  bottom: 0;
+  top: 0;
+  padding: 0;
+  opacity: 0;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
 /* on Mobile */
 @media screen and (max-width: 550px) {
   .featured-image {
@@ -393,13 +485,29 @@ a.custom-card:hover {
   .msg-page {
     height: 300px;
   }
+  #profil .prof {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #profil .prof2 {
+    margin-top: 35px;
+  }
 }
 
+/* on Laptop */
 @media screen and (max-width: 992px) {
   .wrapper-form {
     width: 100%;
   }
   .icon {
     display: none;
+  }
+}
+
+/* on Large Screen */
+@media (min-width: 1200px) {
+  #profil form {
+    margin: 5px 20px 0 10px;
   }
 }
