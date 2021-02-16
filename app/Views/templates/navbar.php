@@ -59,7 +59,7 @@
                 <h6 class="dropdown-header">
                     Alerts Center
                 </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
+                <a class="dropdown-item d-flex align-items-center" href="#" data-toggle="modal" data-target="#oneModal">
                     <div class="mr-3">
                         <div class="icon-circle bg-primary">
                             <i class="fas fa-file-alt text-white"></i>
@@ -130,7 +130,7 @@
                         <div class="small text-gray-500">Jae Chun · 1d</div>
                     </div>
                 </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
+                <a class="dropdown-item d-flex align-items-center" href="#" data-toggle="modal" data-target="#chattingModal">
                     <div class="dropdown-list-image mr-3">
                         <img class="rounded-circle" src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="">
                         <div class="status-indicator bg-warning"></div>
@@ -170,14 +170,6 @@
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Activity Log
-                </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -185,17 +177,118 @@
                 </a>
             </div>
         </li>
-
     </ul>
-
 </nav>
 <!-- End of Topbar -->
-<!-- Register Modal -->
+
+<div class="modal modal-konsultasi fade" id="chattingModal" tabindex="-1" aria-labelledby="chattingModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="konsultasiContent">
+            <div class="modal-header" id="konsultasiHeader">
+                <div class="msg-header-img">
+                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" class="profile" alt="Cool">
+                </div>
+                <div class="name-profile">
+                    <p>Senku Ishigami</p>
+                </div>
+                <div class="header-icons">
+                    <div class="dropdown">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>  
+                        </a>
+                        <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
+                                <i class="fas fa-check fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Tandai Selesai
+                            </a>
+                        </div>
+                        <a href="#" data-toggle="modal" data-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body" id="konsultasiBody">
+                <div class="msg-inbox">
+                    <div class="chats">
+                        <div class="msg-page">
+                            <div class="received-chats">
+                                <div class="received-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Guru">
+                                </div>
+                                <div class="received-msg">
+                                    <div class="received-msg-inbox">
+                                        <p>Selamat siang, pak</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="outgoing-chats">
+                                <div class="outgoing-msg-inbox">
+                                    <p>Selamat siang</p>
+                                </div>
+                                <div class="outgoing-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
+                                </div>
+                            </div>
+                            <div class="received-chats">
+                                <div class="received-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Guru">
+                                </div>
+                                <div class="received-msg">
+                                    <div class="received-msg-inbox">
+                                         <p>Mohon maaf mengganggu waktunya sebentar, pak</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="outgoing-chats">
+                                    <div class="outgoing-msg-inbox">
+                                        <p>Oh iya, tidak apa-apa</p>
+                                    </div>
+                                <div class="outgoing-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
+                                </div>
+                            </div>
+                            <div class="outgoing-chats">
+                                    <div class="outgoing-msg-inbox">
+                                        <p>Ada apa di waktu hari ini?</p>
+                                    </div>
+                                <div class="outgoing-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
+                                </div>
+                            </div>
+                            <div class="received-chats">
+                                <div class="received-chats-img">
+                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Guru">
+                                </div>
+                                <div class="received-msg">
+                                    <div class="received-msg-inbox">
+                                        <p>Maaf pak, saya sedikit bermasalah dengan kehidupan saya</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" id="konsultasiFooter">
+                <div class="input-group" id="group">
+                    <input type="text" class="form-control" id="input-message" placeholder="Tulis pesan disini...">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="group-text"><i class="fas fa-paper-plane"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Logout Modal -->
 <div class="modal modal-login fade" id="logoutModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h5 class="modal-title font-weight-bold" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -203,7 +296,26 @@
             <div class="modal-body text-center py-3">
                 <p>Apakah anda yakin untuk keluar <br /> dari website ini?</p>
                 <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button></a>
-                <a href="/"><button type="button" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal modal-end fade" id="oneModal" tabindex="-1" aria-labelledby="oneModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="endContent">
+            <div class="modal-header" id="endHeader">
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-3" id="endBody">
+                <p>Apakah anda ingin menerima <br /> permintaan konsultasi ini?</p>
+                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> No</button></a>
+                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
             </div>
         </div>
     </div>

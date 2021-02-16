@@ -37,35 +37,43 @@ html {
 }
 
 .modal-login,
-#loginContent {
+#loginContent,
+.modal-end,
+#endContent {
   border-radius: 20px;
 }
 
-#loginHeader {
+#loginHeader,
+#endHeader {
   display: inline-block !important;
   text-align: center;
 }
 
-#loginHeader h5 {
+#loginHeader h5,
+#endHeader h5 {
   color: rgb(4, 121, 255);
   font-size: 15px;
 }
 
-#loginHeader button {
+#loginHeader button,
+#endHeader button {
   position: absolute;
   top: 17px;
   right: 17px;
 }
 
-#loginBody {
+#loginBody,
+#endBody {
   text-align: center;
 }
 
-#loginBody p {
+#loginBody p,
+#endBody p  {
   color: gray;
 }
 
-#loginBody button {
+#loginBody button,
+#endBody button {
   width: 200px;
 }
 
@@ -476,10 +484,12 @@ a.custom-card:hover {
     margin-top: 0;
   }
   .modal-login,
-  .modal-konsultasi {
+  .modal-konsultasi,
+  .modal-end {
     text-align: center !important;
   }
-  #loginBody button {
+  #loginBody button,
+  #endBody button {
     width: 100px;
   }
   .msg-page {

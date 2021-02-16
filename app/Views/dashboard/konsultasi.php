@@ -61,10 +61,20 @@
                     <p>Senku Ishigami</p>
                 </div>
                 <div class="header-icons">
-                    <i class="fas fa-ellipsis-v"></i>
-                    <a href="#" data-toggle="modal" data-dismiss="modal" aria-label="Close">
-                        <i class="fas fa-times"></i>
-                    </a>
+                    <div class="dropdown">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>  
+                        </a>
+                        <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
+                                <i class="fas fa-check fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Tandai Selesai
+                            </a>
+                        </div>
+                        <a href="#" data-toggle="modal" data-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="modal-body" id="konsultasiBody">
@@ -136,6 +146,25 @@
                         <span class="input-group-text" id="group-text"><i class="fas fa-paper-plane"></i></span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal modal-end fade" id="endModal" tabindex="-1" aria-labelledby="endModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="endContent">
+            <div class="modal-header" id="endHeader">
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-3" id="endBody">
+                <p>Apakah anda yakin ingin mengakhiri <br /> percakapan ini?</p>
+                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button></a>
+                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
             </div>
         </div>
     </div>
