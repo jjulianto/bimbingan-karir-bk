@@ -8,7 +8,7 @@ class Konsultasi extends BaseController
     {
         $data = [
             'title' => 'Riwayat Konsultasi',
-            'user' => 'List Siswa'
+            'check' => 'konsultasi'
         ];
         return view('dashboard/konsultasi', $data);
     }

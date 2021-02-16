@@ -8,7 +8,7 @@ class Home extends BaseController
 	{
 		$data = [
 			'title' => 'Dashboard',
-			'user' => 'List Siswa',
+			'check' => 'dashboard'
 		];
 		return view('dashboard/dashboard', $data);
 	}

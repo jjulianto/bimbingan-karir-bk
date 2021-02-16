@@ -18,24 +18,31 @@
     </div>
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item <?php if($check=='dashboard'){echo 'active';}?>">
         <a class="nav-link" href="/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
 
     <!-- Nav Item - User -->
-    <li class="nav-item">
+    <li class="nav-item <?php if($check=='siswa'){echo 'active';}?>">
         <a class="nav-link" href="/list-siswa">
-            <i class="fas fa-fw fa-user"></i>
-            <span><?= $user; ?></span></a>
+            <i class="fas fa-fw fa-user-friends"></i>
+            <span><?= $this->renderSection('list-user'); ?></span></a>
     </li>
 
     <!-- Nav Item - Konsultasi -->
-    <li class="nav-item">
+    <li class="nav-item <?php if($check=='konsultasi'){echo 'active';}?>">
         <a class="nav-link" href="/riwayat-konsultasi">
             <i class="fas fa-fw fa-comment"></i>
             <span>Konsultasi Anda</span></a>
+    </li>
+
+    <!-- Nav Item - Profile -->
+    <li class="nav-item <?php if($check=='profile'){echo 'active';}?>">
+        <a class="nav-link" href="/profile-guru">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Profile</span></a>
     </li>
 
     <!-- Divider -->

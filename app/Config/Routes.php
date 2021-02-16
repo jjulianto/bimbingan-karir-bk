@@ -35,7 +35,8 @@ $routes->get('/', 'Login::login');
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/list-siswa', 'User::siswa');
 $routes->get('/riwayat-konsultasi', 'Konsultasi::index');
-$routes->get('/profile', 'Profile::index');
+$routes->get('/profile-guru', 'Profile::index');
+$routes->get('/profile-siswa', 'Profile::siswa');
 
 /**
  * --------------------------------------------------------------------

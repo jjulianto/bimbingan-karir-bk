@@ -9,8 +9,8 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <i class="fas fa-user mr-1"></i>
-            <span><?= $user; ?></span>
+            <i class="fas fa-user-friends mr-1"></i>
+            <span>List Siswa</span>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -83,8 +83,9 @@
 </div>
 <!-- /.container-fluid -->
 <?= $this->endSection(); ?>
-<?= $this->extend('templates/template'); ?>
-
+<?= $this->section('list-user'); ?>
+    List Siswa
+<?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>
     $('#dataTable').dataTable({

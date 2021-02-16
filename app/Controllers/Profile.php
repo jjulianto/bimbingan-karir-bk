@@ -8,9 +8,18 @@ class Profile extends BaseController
     {
         $data = [
             'title' => 'Profile',
-            'user' => 'List Siswa'
+            'check' => 'profile'
         ];
         return view('dashboard/profile', $data);
+    }
+
+    public function siswa()
+    {
+        $data = [
+            'title' => 'Profile',
+            'user' => 'List Guru'
+        ];
+        return view('dashboard-siswa/profile-siswa', $data);
     }
 
     //--------------------------------------------------------------------

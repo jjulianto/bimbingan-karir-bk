@@ -30,8 +30,8 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="exampleInputNip">NIP</label>
-                        <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" placeholder="Masukkan NIP">
+                        <label for="exampleInputNis">NIS</label>
+                        <input type="number" class="form-control" id="exampleInputNis" aria-describedby="NIShelp" placeholder="Masukkan NIS">
                         <div class="invalid-feedback d-block">
                             Mohon pilih status anda!
                         </div>
@@ -56,18 +56,67 @@
                         </div>
                     </div>
                     <div class="form-group col">
-                        <label for="exampleInputNomor">Nomor Telepon</label>
-                        <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon">
+                        <label for="exampleInputDate">Tanggal Lahir</label>
+                        <input type="date" class="form-control" id="exampleInputDate" aria-describedby="NIShelp">
+                        <div class="invalid-feedback d-block">
+                            Mohon pilih status anda!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="exampleFormControlSelect1">Jurusan</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="TEI">TEI</option>
+                            <option value="TOI">TOI</option>
+                            <option value="IOP">IOP</option>
+                            <option value="RPL">RPL</option>
+                            <option value="SIJA">SIJA</option>
+                            <option value="TPTU">TPTU</option>
+                            <option value="PFPT">PFPT</option>
+                            <option value="TEDK">TEDK</option>
+                            <option value="MEKA">MEKA</option>
+                        </select>
+                        <div class="invalid-feedback d-block">
+                            Mohon pilih status anda!
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleFormControlSelect1">Kelas</label>
+                        <select class="form-control" id="exampleFormControlSelect2">
+                            <option value="X">X</option>
+                            <option value="XI">XI</option>
+                            <option value="XII">XII</option>
+                            <option value="XIII">XIII</option>
+                        </select>
+                        <div class="invalid-feedback d-block">
+                            Mohon pilih status anda!
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleFormControlSelect1">Rombel</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
                         <div class="invalid-feedback d-block">
                             Mohon pilih status anda!
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputNomor">Nomor Telepon</label>
+                    <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon">
+                    <div class="invalid-feedback d-block">
+                        Mohon pilih status anda!
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="exampleFormControlTextarea1">Alamat</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     <div class="invalid-feedback d-block">
-                            Mohon pilih status anda!
+                        Mohon pilih status anda!
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
@@ -76,10 +125,10 @@
 </div>
 <?= $this->endSection(); ?>
 <?= $this->section('user'); ?>
-    /profile-guru
+    /profile-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Siswa
+    List Guru
 <?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>

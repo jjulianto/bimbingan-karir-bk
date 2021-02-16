@@ -8,7 +8,7 @@ class User extends BaseController
     {
         $data = [
             'title' => 'List Siswa',
-            'user' => 'List Siswa',
+            'check' => 'siswa'
         ];
         return view('dashboard/user', $data);
     }
