@@ -8,7 +8,7 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        <div class="card-header py-3 text-primary">
             <i class="fas fa-user-friends mr-1"></i>
             <span>List Siswa</span>
         </div>
@@ -17,69 +17,71 @@
                 <table class="table table-bordered table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Alamat</th>
+                            <th>No.Telepon</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
+                            <td>181113837</td>
+                            <td>Julianto</td>
+                            <td>XII RPL A</td>
+                            <td>Hujung Kulon</td>
+                            <td>082119086814</td>
+                            <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
+                            <td>171113637</td>
+                            <td>Ilham Maulana Razaq</td>
+                            <td>XIII TEI B</td>
+                            <td>Baros</td>
+                            <td>089238193171</td>
+                            <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
+                            <td>191113818</td>
+                            <td>Aver Pratama Putra</td>
+                            <td>XI RPL A</td>
+                            <td>Cimahi Tengah</td>
+                            <td>089139313136</td>
+                            <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012/03/29</td>
-                            <td>$433,060</td>
-                        </tr>
-                        <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>33</td>
-                            <td>2008/11/28</td>
-                            <td>$162,700</td>
-                        </tr>
-                        <tr>
-                            <td>Brielle Williamson</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                            <td>61</td>
-                            <td>2012/12/02</td>
-                            <td>$372,000</td>
+                            <td>201113814</td>
+                            <td>Abu Haris Al-Syihab</td>
+                            <td>X RPL B</td>
+                            <td>Bobojong</td>
+                            <td>089685416591</td>
+                            <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
+</div>
+<!-- Modal -->
+<div class="modal modal-end fade" id="twoModal" tabindex="-1" aria-labelledby="twoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="endContent">
+            <div class="modal-header" id="endHeader">
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-3" id="endBody">
+                <p>Apakah anda yakin ingin berkonsultasi <br /> dengan orang yang bersangkutan?</p>
+                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button></a>
+                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /.container-fluid -->
 <?= $this->endSection(); ?>

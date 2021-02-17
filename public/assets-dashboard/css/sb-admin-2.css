@@ -4793,6 +4793,12 @@ input[type="button"].btn-block {
   border-radius: 0.35rem;
 }
 
+#dashboard-card:hover {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(0, 0, 0, 0.7) !important;
+  transition: 0.5s !important;
+  cursor: pointer !important;
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -11248,7 +11254,7 @@ a:focus {
 
 .chart-bar {
   position: relative;
-  height: 10rem;
+  height: 19.5rem !important;
   width: 100%;
 }
 
@@ -11260,7 +11266,7 @@ a:focus {
 
 .chart-pie {
   position: relative;
-  height: 15rem;
+  height: 16rem;
   width: 100%;
 }
 

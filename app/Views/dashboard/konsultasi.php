@@ -3,7 +3,23 @@
 <?= $this->section('content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h4 mb-4 text-gray-800">Riwayat Konsultasi</h1>
+    <div class="row justify-content-between">
+        <div class="col-3">
+            <h1 class="h4 text-gray-800 pt-2">Riwayat Konsultasi</h1>
+        </div>
+        <div class="col-3 mb-3">
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" class="form-control border-0 small" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="row mb-4">
         <div class="col-md-12 card-konten">
             <div class="item">
@@ -61,11 +77,11 @@
                     <p>Senku Ishigami</p>
                 </div>
                 <div class="header-icons">
-                    <div class="dropdown">
-                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v"></i>  
                         </a>
-                        <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
                                 <i class="fas fa-check fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Tandai Selesai
@@ -157,13 +173,13 @@
             <div class="modal-header" id="endHeader">
                 <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body py-3" id="endBody">
                 <p>Apakah anda yakin ingin mengakhiri <br /> percakapan ini?</p>
-                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button></a>
+                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal"><i class="fas fa-times"></i> Cancel</button></a>
                 <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
             </div>
         </div>
@@ -172,4 +188,25 @@
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
     List Siswa
+<?= $this->endSection(); ?>
+<?= $this->section('search-button'); ?>
+<!-- Nav Item - Search Dropdown (Visible Only XS) -->
+<li class="nav-item dropdown no-arrow d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-search fa-fw"></i>
+    </a>
+    <!-- Dropdown - Messages -->
+    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--fade-in" aria-labelledby="searchDropdown">
+        <form class="form-inline mr-auto w-100 navbar-search">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
 <?= $this->endSection(); ?>

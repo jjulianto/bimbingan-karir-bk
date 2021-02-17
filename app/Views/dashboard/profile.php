@@ -32,14 +32,14 @@
                     <div class="form-group col-md-6">
                         <label for="exampleInputNip">NIP</label>
                         <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" placeholder="Masukkan NIP">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -51,14 +51,14 @@
                             <option value="laki-laki">Laki-laki</option>
                             <option value="perempuan">Perempuan</option>
                         </select>
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col">
                         <label for="exampleInputNomor">Nomor Telepon</label>
                         <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Alamat</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    <div class="invalid-feedback d-block">
+                    <div class="invalid-feedback">
                             Mohon pilih status anda!
                     </div>
                 </div>

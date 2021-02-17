@@ -11,42 +11,9 @@
         <i class="fa fa-bars"></i>
     </button>
 
-
-    <!-- Topbar Search -->
-    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-        <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                </button>
-            </div>
-        </div>
-    </form>
-
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
-
-        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-        <li class="nav-item dropdown no-arrow d-sm-none">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-            </a>
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </li>
-
+        <?= $this->renderSection('search-button'); ?>
         <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,42 +24,41 @@
             <!-- Dropdown - Alerts -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
-                    Alerts Center
+                    Permintaan Konsultasi
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#" data-toggle="modal" data-target="#oneModal">
                     <div class="mr-3">
                         <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
+                            <i class="fas fa-user text-white"></i>
                         </div>
                     </div>
                     <div>
-                        <div class="small text-gray-500">December 12, 2019</div>
-                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                        <div class="small text-gray-500">December 19, 2020</div>
+                        Ada seorang siswa yang ingin melakukan konsultasi dengan anda
                     </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="mr-3">
-                        <div class="icon-circle bg-success">
-                            <i class="fas fa-donate text-white"></i>
+                        <div class="icon-circle bg-primary">
+                            <i class="fas fa-user text-white"></i>
                         </div>
                     </div>
                     <div>
-                        <div class="small text-gray-500">December 7, 2019</div>
-                        $290.29 has been deposited into your account!
+                        <div class="small text-gray-500">July 29, 2020</div>
+                        Ada seorang siswa yang ingin melakukan konsultasi dengan anda
                     </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="mr-3">
-                        <div class="icon-circle bg-warning">
-                            <i class="fas fa-exclamation-triangle text-white"></i>
+                        <div class="icon-circle bg-primary">
+                            <i class="fas fa-user text-white"></i>
                         </div>
                     </div>
                     <div>
-                        <div class="small text-gray-500">December 2, 2019</div>
-                        Spending Alert: We've noticed unusually high spending for your account.
+                        <div class="small text-gray-500">Maret 20, 2020</div>
+                        Ada seorang siswa yang ingin melakukan konsultasi dengan anda
                     </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
             </div>
         </li>
 
@@ -106,14 +72,14 @@
             <!-- Dropdown - Messages -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
-                    Message Center
+                    Pesan Masuk
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
                         <img class="rounded-circle" src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_1.svg" alt="">
                         <div class="status-indicator bg-success"></div>
                     </div>
-                    <div class="font-weight-bold">
+                    <div>
                         <div class="text-truncate">Hi there! I am wondering if you can help me with a
                             problem I've been having.</div>
                         <div class="small text-gray-500">Emily Fowler · 58m</div>
@@ -152,7 +118,6 @@
                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                     </div>
                 </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
             </div>
         </li>
 
@@ -315,6 +280,25 @@
             <div class="modal-body py-3" id="endBody">
                 <p>Apakah anda ingin menerima <br /> permintaan konsultasi ini?</p>
                 <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> No</button></a>
+                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal modal-end fade" id="endModal" tabindex="-1" aria-labelledby="endModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="endContent">
+            <div class="modal-header" id="endHeader">
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-3" id="endBody">
+                <p>Apakah anda yakin ingin mengakhiri <br /> percakapan ini?</p>
+                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal"><i class="fas fa-times"></i> Cancel</button></a>
                 <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
             </div>
         </div>

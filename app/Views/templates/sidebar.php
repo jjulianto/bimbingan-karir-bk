@@ -34,7 +34,7 @@
     <!-- Nav Item - Konsultasi -->
     <li class="nav-item <?php if($check=='konsultasi'){echo 'active';}?>">
         <a class="nav-link" href="/riwayat-konsultasi">
-            <i class="fas fa-fw fa-comment"></i>
+            <i class="fas fa-fw fa-comments"></i>
             <span>Konsultasi</span></a>
     </li>
 
