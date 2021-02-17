@@ -59,6 +59,17 @@
                         Ada seorang siswa yang ingin melakukan konsultasi dengan anda
                     </div>
                 </a>
+                <a class="dropdown-item d-flex align-items-center" href="#" href="#" data-toggle="modal" data-target="#threeModal">
+                    <div class="mr-3">
+                        <div class="icon-circle bg-primary">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="small text-gray-500">Maret 20, 2020</div>
+                        Ada satu permintaan konsultasi anda yang telah ditolak.
+                    </div>
+                </a>
             </div>
         </li>
 
@@ -300,6 +311,23 @@
                 <p>Apakah anda yakin ingin mengakhiri <br /> percakapan ini?</p>
                 <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal"><i class="fas fa-times"></i> Cancel</button></a>
                 <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal modal-end fade" id="threeModal" tabindex="-1" aria-labelledby="threeModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="endContent">
+            <div class="modal-header" id="endHeader">
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-3" id="endBody">
+                <p>Mohon maaf orang yang bersangkutan sedang tidak ingin diajak berkonsultasi. Mohon tunggu beberapa saat waktu <br/> untuk mengajaknya berkonsultasi.</p>
             </div>
         </div>
     </div>
