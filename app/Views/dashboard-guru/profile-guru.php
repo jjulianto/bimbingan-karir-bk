@@ -81,6 +81,18 @@
 <?= $this->section('list-user'); ?>
     List Siswa
 <?= $this->endSection(); ?>
+<?= $this->section('dashboard'); ?>
+    /dashboard-guru
+<?= $this->endSection(); ?>
+<?= $this->section('user'); ?>
+    /list-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('konsultasi'); ?>
+    /riwayat-konsultasi-guru
+<?= $this->endSection(); ?>
+<?= $this->section('profile'); ?>
+    /profile-guru
+<?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>
     document.getElementById('getval').addEventListener('change', readURL, true);

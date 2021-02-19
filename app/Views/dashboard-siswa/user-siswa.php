@@ -10,16 +10,15 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-primary">
             <i class="fas fa-user-friends mr-1"></i>
-            <span>List Siswa</span>
+            <span>List Guru</span>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>NIS</th>
+                            <th>NIP</th>
                             <th>Nama</th>
-                            <th>Kelas</th>
                             <th>Alamat</th>
                             <th>No.Telepon</th>
                             <th>Aksi</th>
@@ -27,33 +26,29 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>181113837</td>
-                            <td>Julianto</td>
-                            <td>XII RPL A</td>
+                            <td>1957104834242</td>
+                            <td>Dr. Ahmad Sadikin s.pd</td>
                             <td>Hujung Kulon</td>
                             <td>082119086814</td>
                             <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>171113637</td>
-                            <td>Ilham Maulana Razaq</td>
-                            <td>XIII TEI B</td>
+                            <td>18471947101342</td>
+                            <td>Siti Khodijah s.pd</td>
                             <td>Baros</td>
                             <td>089238193171</td>
                             <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>191113818</td>
-                            <td>Aver Pratama Putra</td>
-                            <td>XI RPL A</td>
+                            <td>19862634614732</td>
+                            <td>Yana Permana s.pd</td>
                             <td>Cimahi Tengah</td>
                             <td>089139313136</td>
                             <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                         </tr>
                         <tr>
-                            <td>201113814</td>
-                            <td>Abu Haris Al-Syihab</td>
-                            <td>X RPL B</td>
+                            <td>155711851917</td>
+                            <td>Dede Sigede s.pd</td>
                             <td>Bobojong</td>
                             <td>089685416591</td>
                             <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
@@ -86,7 +81,19 @@
 <!-- /.container-fluid -->
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Siswa
+    List Guru
+<?= $this->endSection(); ?>
+<?= $this->section('dashboard'); ?>
+    /dashboard-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('user'); ?>
+    /list-guru
+<?= $this->endSection(); ?>
+<?= $this->section('konsultasi'); ?>
+    /riwayat-konsultasi-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('profile'); ?>
+    /profile-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>

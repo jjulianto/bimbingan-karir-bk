@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="row mb-4">
-        <a href="#" data-toggle="modal" data-target="#chattingModal" class="custom-card">
+        <a href="#" data-toggle="modal" data-target="#chattingModal2" class="custom-card">
             <div class="col-md-12 card-konten">
                 <div class="item">
                     <div class="featured-image mb-3">
@@ -66,7 +66,7 @@
     </div>
 </div>
 
-<div class="modal modal-konsultasi fade" id="chattingModal" tabindex="-1" aria-labelledby="chattingModal" aria-hidden="true">
+<div class="modal modal-konsultasi fade" id="chattingModal2" tabindex="-1" aria-labelledby="chattingModal2" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="konsultasiContent">
             <div class="modal-header" id="konsultasiHeader">
@@ -103,13 +103,13 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                        <p>Selamat siang, pak</p>
+                                        <p>Selamat siang</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="outgoing-chats">
                                 <div class="outgoing-msg-inbox">
-                                    <p>Selamat siang</p>
+                                    <p>Selamat siang, pak</p>
                                 </div>
                                 <div class="outgoing-chats-img">
                                     <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
@@ -121,34 +121,16 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                         <p>Mohon maaf mengganggu waktunya sebentar, pak</p>
+                                         <p>Ada apa di waktu hari ini?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="outgoing-chats">
-                                    <div class="outgoing-msg-inbox">
-                                        <p>Oh iya, tidak apa-apa</p>
-                                    </div>
+                                <div class="outgoing-msg-inbox">
+                                    <p>Maaf pak, ada sedikit permasalahan di kehidupan saya...</p>
+                                </div>
                                 <div class="outgoing-chats-img">
                                     <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
-                                </div>
-                            </div>
-                            <div class="outgoing-chats">
-                                    <div class="outgoing-msg-inbox">
-                                        <p>Ada apa di waktu hari ini?</p>
-                                    </div>
-                                <div class="outgoing-chats-img">
-                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
-                                </div>
-                            </div>
-                            <div class="received-chats">
-                                <div class="received-chats-img">
-                                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Guru">
-                                </div>
-                                <div class="received-msg">
-                                    <div class="received-msg-inbox">
-                                        <p>Maaf pak, saya sedikit bermasalah dengan kehidupan saya</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +169,7 @@
 </div>
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Siswa
+    List Guru
 <?= $this->endSection(); ?>
 <?= $this->section('search-button'); ?>
 <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -209,4 +191,19 @@
         </form>
     </div>
 </li>
+<?= $this->endSection(); ?>
+<?= $this->section('dashboard'); ?>
+    /dashboard-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('user'); ?>
+    /list-guru
+<?= $this->endSection(); ?>
+<?= $this->section('konsultasi'); ?>
+    /riwayat-konsultasi-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('profile'); ?>
+    /profile-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('chat-message'); ?>
+    #chattingModal2
 <?= $this->endSection(); ?>

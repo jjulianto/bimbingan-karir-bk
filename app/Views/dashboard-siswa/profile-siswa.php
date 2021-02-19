@@ -32,14 +32,14 @@
                     <div class="form-group col-md-6">
                         <label for="exampleInputNis">NIS</label>
                         <input type="number" class="form-control" id="exampleInputNis" aria-describedby="NIShelp" placeholder="Masukkan NIS">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -51,14 +51,14 @@
                             <option value="laki-laki">Laki-laki</option>
                             <option value="perempuan">Perempuan</option>
                         </select>
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col">
                         <label for="exampleInputDate">Tanggal Lahir</label>
                         <input type="date" class="form-control" id="exampleInputDate" aria-describedby="NIShelp">
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <option value="TEDK">TEDK</option>
                             <option value="MEKA">MEKA</option>
                         </select>
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                             <option value="XII">XII</option>
                             <option value="XIII">XIII</option>
                         </select>
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                             <option value="B">B</option>
                             <option value="C">C</option>
                         </select>
-                        <div class="invalid-feedback d-block">
+                        <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
@@ -108,14 +108,14 @@
                 <div class="form-group">
                     <label for="exampleInputNomor">Nomor Telepon</label>
                     <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon">
-                    <div class="invalid-feedback d-block">
+                    <div class="invalid-feedback">
                         Mohon pilih status anda!
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Alamat</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    <div class="invalid-feedback d-block">
+                    <div class="invalid-feedback">
                         Mohon pilih status anda!
                     </div>
                 </div>
@@ -124,11 +124,20 @@
         </div>
 </div>
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
-    /profile-siswa
-<?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
     List Guru
+<?= $this->endSection(); ?>
+<?= $this->section('dashboard'); ?>
+    /dashboard-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('user'); ?>
+    /list-guru
+<?= $this->endSection(); ?>
+<?= $this->section('konsultasi'); ?>
+    /riwayat-konsultasi-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('profile'); ?>
+    /profile-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>

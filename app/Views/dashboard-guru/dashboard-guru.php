@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-xl-4 col-md-6 mb-4">
-            <a href="/riwayat-konsultasi" class="dashboard-card">
+            <a href="/riwayat-konsultasi-guru" class="dashboard-card">
             <div class="card border-left-success shadow h-100 py-2" id="dashboard-card">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -121,4 +121,16 @@
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
     List Siswa
+<?= $this->endSection(); ?>
+<?= $this->section('dashboard'); ?>
+    /dashboard-guru
+<?= $this->endSection(); ?>
+<?= $this->section('user'); ?>
+    /list-siswa
+<?= $this->endSection(); ?>
+<?= $this->section('konsultasi'); ?>
+    /riwayat-konsultasi-guru
+<?= $this->endSection(); ?>
+<?= $this->section('profile'); ?>
+    /profile-guru
 <?= $this->endSection(); ?>

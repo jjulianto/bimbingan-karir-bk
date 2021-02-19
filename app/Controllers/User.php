@@ -4,13 +4,24 @@ namespace App\Controllers;
 
 class User extends BaseController
 {
-    public function siswa()
+    public function guru()
     {
         $data = [
             'title' => 'List Siswa',
-            'check' => 'siswa'
+            'check' => 'siswa',
+            'user'  => 'guru'
         ];
-        return view('dashboard/user', $data);
+        return view('dashboard-guru/user-guru', $data);
+    }
+
+    public function siswa()
+    {
+        $data = [
+            'title' => 'List Guru',
+            'check' => 'siswa',
+            'user'  => 'siswa'
+        ];
+        return view('dashboard-siswa/user-siswa', $data);
     }
 
     //--------------------------------------------------------------------
