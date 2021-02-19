@@ -146,7 +146,7 @@
 </nav>
 <!-- End of Topbar -->
 
-Chatting Guru Modal
+<!-- Chatting Guru Modal -->
 <div class="modal modal-konsultasi fade" id="chattingModal" tabindex="-1" aria-labelledby="chattingModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="konsultasiContent">
