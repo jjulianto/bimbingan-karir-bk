@@ -78,7 +78,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
+    <!-- <script>
         $(".toggle-password").click(function() {
 
             $(this).toggleClass("fa-eye fa-eye-slash");
@@ -89,7 +89,7 @@
                 input.attr("type", "password");
             }
         });
-    </script>
+    </script> -->
     <?= $this->renderSection('more-js'); ?>
 </body>
 

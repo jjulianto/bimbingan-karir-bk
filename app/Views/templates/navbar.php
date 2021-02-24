@@ -126,7 +126,7 @@
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hi, Douglas McGee</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hi, <?= session('nama'); ?></span>
                 <img class="img-profile rounded-circle" src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile.svg">
             </a>
             <!-- Dropdown - User Information -->
@@ -346,7 +346,7 @@
             <div class="modal-body text-center py-3">
                 <p>Apakah anda yakin untuk keluar <br /> dari website ini?</p>
                 <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button></a>
-                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+                <a href="/login/logout"><button type="button" class="btn btn-success"><i class="fas fa-sign-out-alt"></i> Logout</button></a>
             </div>
         </div>
     </div>

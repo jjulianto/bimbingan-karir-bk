@@ -21,24 +21,24 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputUserame">Username</label>
-                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly disabled>
+                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly value="<?= session('username'); ?>">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly disabled>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly value="<?= session('password'); ?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="exampleInputNip">NIP</label>
-                        <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" placeholder="Masukkan NIP">
+                        <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" readonly value="<?= session('nip'); ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama">
+                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama" value="<?= session('nama'); ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="exampleInputNomor">Nomor Telepon</label>
-                        <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon">
+                        <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon" value="<?= session('no_telp'); ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>

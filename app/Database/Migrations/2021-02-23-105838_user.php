@@ -14,13 +14,13 @@ class User extends Migration
 				'auto_increment' => true
 			],
 			'nis'       => [
-				'type'           => 'INT',
-				'constraint'     => '20',
+				'type'           => 'BIGINT',
+				'constraint'     => '255',
 				'null'           => true,
 			],
 			'nip'       => [
-				'type'           => 'INT',
-				'constraint'     => '20',
+				'type'           => 'BIGINT',
+				'constraint'     => '255',
 				'null'           => true,
 			],
 			'nama'      => [
@@ -41,6 +41,11 @@ class User extends Migration
 				'constraint'     => 255,
 				'null'           => true,
 			],
+			'rombel'      => [
+				'type'           => 'VARCHAR',
+				'constraint'     => 255,
+				'null'           => true,
+			],
 			'tanggal_lahir'      => [
 				'type'           => 'DATE',
 				'null'           => true,
@@ -49,12 +54,13 @@ class User extends Migration
 				'type'           => 'TEXT',
 			],
 			'no_telp'      => [
-				'type'           => 'INT',
-				'constraint'     => 20,
+				'type'           => 'BIGINT',
+				'constraint'     => 255,
 			],
 			'gambar'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => 255,
+				'null'           => true,
 			],
 			'username'      => [
 				'type'           => 'VARCHAR',
@@ -67,6 +73,11 @@ class User extends Migration
 			'role'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => 255,
+			],
+			'slug'      => [
+				'type'           => 'VARCHAR',
+				'constraint'     => 255,
+				'null'           => true,
 			],
 		]);
 
