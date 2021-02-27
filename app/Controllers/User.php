@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class User extends BaseController
 {
+    protected $user;
+    public function __construct()
+    {
+        $this->UserModel = new UserModel();
+    }
+
     public function guru()
     {
         if (session()->get('role') == 'siswa') {
@@ -14,6 +22,7 @@ class User extends BaseController
             'check' => 'siswa',
             'user'  => 'guru'
         ];
+        $data['user'] = $this->UserModel->where('role', 'siswa')->findAll();
         return view('dashboard-guru/user-guru', $data);
     }
 
@@ -27,6 +36,7 @@ class User extends BaseController
             'check' => 'siswa',
             'user'  => 'siswa'
         ];
+        $data['user'] = $this->UserModel->where('role', 'guru')->findAll();
         return view('dashboard-siswa/user-siswa', $data);
     }
 

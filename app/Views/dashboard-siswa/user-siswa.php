@@ -25,14 +25,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1957104834242</td>
-                            <td>Dr. Ahmad Sadikin s.pd</td>
-                            <td>Hujung Kulon</td>
-                            <td>082119086814</td>
-                            <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
-                        </tr>
-                        <tr>
+                        <?php
+                        foreach ($user as $row) {
+                        ?>
+                            <tr>
+                                <td><?= $row->nip; ?></td>
+                                <td><?= $row->nama; ?></td>
+                                <td><?= $row->alamat; ?></td>
+                                <td><?= $row->no_telp; ?></td>
+                                <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                        <!-- <tr>
                             <td>18471947101342</td>
                             <td>Siti Khodijah s.pd</td>
                             <td>Baros</td>
@@ -52,7 +58,7 @@
                             <td>Bobojong</td>
                             <td>089685416591</td>
                             <td><button class="btn btn-primary" type="submit"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -64,7 +70,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="endContent">
             <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -81,19 +87,19 @@
 <!-- /.container-fluid -->
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Guru
+List Guru
 <?= $this->endSection(); ?>
 <?= $this->section('dashboard'); ?>
-    /dashboard-siswa
+/dashboard-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('user'); ?>
-    /list-guru
+/list-guru
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>
-    /riwayat-konsultasi-siswa
+/riwayat-konsultasi-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('profile'); ?>
-    /profile-siswa
+/profile-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>
