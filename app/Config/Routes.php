@@ -31,15 +31,17 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::login');
-$routes->get('/dashboard-guru', 'Home::guru');
-$routes->get('/list-siswa', 'User::guru');
-$routes->get('/riwayat-konsultasi-guru', 'Konsultasi::guru');
-$routes->get('/profile-guru', 'Profile::guru');
-$routes->get('/dashboard-siswa', 'Home::siswa');
-$routes->get('/list-guru', 'User::siswa');
-$routes->get('/riwayat-konsultasi-siswa', 'Konsultasi::siswa');
-$routes->get('/profile-siswa', 'Profile::siswa');
+$routes->get('/', 'Login::login', ['filter' => 'noauth']);
+$routes->post('/login/auth', 'Login::auth');
+$routes->get('/login/logout', 'Home::logout', ['filter' => 'authfilter']);
+$routes->get('/dashboard-guru', 'Home::guru', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/list-siswa', 'User::guru', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/riwayat-konsultasi-guru', 'Konsultasi::guru', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/profile-guru', 'Profile::guru', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/dashboard-siswa', 'Home::siswa', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/list-guru', 'User::siswa', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/riwayat-konsultasi-siswa', 'Konsultasi::siswa', ['filter' => 'authfilter'], ['filter' => 'noauth']);
+$routes->get('/profile-siswa', 'Profile::siswa', ['filter' => 'authfilter'], ['filter' => 'noauth']);
 
 /**
  * --------------------------------------------------------------------

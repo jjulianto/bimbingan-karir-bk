@@ -6,6 +6,9 @@ class User extends BaseController
 {
     public function guru()
     {
+        if (session()->get('role') == 'siswa') {
+            return redirect()->to('/dashboard-siswa');
+        }
         $data = [
             'title' => 'List Siswa',
             'check' => 'siswa',
@@ -16,6 +19,9 @@ class User extends BaseController
 
     public function siswa()
     {
+        if (session()->get('role') == 'guru') {
+            return redirect()->to('/dashboard-guru');
+        }
         $data = [
             'title' => 'List Guru',
             'check' => 'siswa',

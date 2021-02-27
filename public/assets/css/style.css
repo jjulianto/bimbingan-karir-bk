@@ -483,6 +483,12 @@ a.dashboard-card:hover {
   display: none;
 }
 
+input[readonly]{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+
 /* on Mobile */
 @media screen and (max-width: 550px) {
   .featured-image {

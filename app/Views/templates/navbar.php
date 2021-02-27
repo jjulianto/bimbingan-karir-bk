@@ -107,7 +107,11 @@
                         <div class="small text-gray-500">Jae Chun · 1d</div>
                     </div>
                 </a>
-                <a class="dropdown-item d-flex align-items-center" href="#" data-toggle="modal" data-target="<?php if($user=='guru'){echo '#chattingModal';} elseif($user=='siswa'){echo '#chattingModal2';}?>">
+                <a class="dropdown-item d-flex align-items-center" href="#" data-toggle="modal" data-target="<?php if ($user == 'guru') {
+                                                                                                                    echo '#chattingModal';
+                                                                                                                } elseif ($user == 'siswa') {
+                                                                                                                    echo '#chattingModal2';
+                                                                                                                } ?>">
                     <div class="dropdown-list-image mr-3">
                         <img class="rounded-circle" src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="">
                         <div class="status-indicator"></div>
@@ -131,12 +135,16 @@
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?php if($user=='guru'){echo '/profile-guru';} elseif($user=='siswa'){echo '/profile-siswa';}?>">
+                <a class="dropdown-item" href="<?php if ($user == 'guru') {
+                                                    echo '/profile-guru';
+                                                } elseif ($user == 'siswa') {
+                                                    echo '/profile-siswa';
+                                                } ?>">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="/login/logout">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a>
@@ -160,7 +168,7 @@
                 <div class="header-icons">
                     <div class="dropdown">
                         <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>  
+                            <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
@@ -202,22 +210,22 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                         <p>Mohon maaf mengganggu waktunya sebentar, pak</p>
+                                        <p>Mohon maaf mengganggu waktunya sebentar, pak</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="outgoing-chats">
-                                    <div class="outgoing-msg-inbox">
-                                        <p>Oh iya, tidak apa-apa</p>
-                                    </div>
+                                <div class="outgoing-msg-inbox">
+                                    <p>Oh iya, tidak apa-apa</p>
+                                </div>
                                 <div class="outgoing-chats-img">
                                     <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
                                 </div>
                             </div>
                             <div class="outgoing-chats">
-                                    <div class="outgoing-msg-inbox">
-                                        <p>Ada apa di waktu hari ini?</p>
-                                    </div>
+                                <div class="outgoing-msg-inbox">
+                                    <p>Ada apa di waktu hari ini?</p>
+                                </div>
                                 <div class="outgoing-chats-img">
                                     <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_2.svg" alt="Guru">
                                 </div>
@@ -262,7 +270,7 @@
                 <div class="header-icons">
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>  
+                            <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
@@ -304,7 +312,7 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                         <p>Ada apa di waktu hari ini?</p>
+                                        <p>Ada apa di waktu hari ini?</p>
                                     </div>
                                 </div>
                             </div>
@@ -333,7 +341,7 @@
 </div>
 
 <!-- Logout Modal -->
-<div class="modal modal-login fade" id="logoutModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
+<!-- <div class="modal modal-login fade" id="logoutModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header text-center">
@@ -350,13 +358,13 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Modal -->
 <div class="modal modal-end fade" id="oneModal" tabindex="-1" aria-labelledby="oneModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="endContent">
             <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -375,7 +383,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="endContent">
             <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -394,14 +402,14 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="endContent">
             <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body py-3" id="endBody">
-                <p>Mohon maaf orang yang bersangkutan sedang tidak ingin diajak berkonsultasi. Mohon tunggu beberapa saat waktu <br/> untuk mengajaknya berkonsultasi.</p>
+                <p>Mohon maaf orang yang bersangkutan sedang tidak ingin diajak berkonsultasi. Mohon tunggu beberapa saat waktu <br /> untuk mengajaknya berkonsultasi.</p>
             </div>
         </div>
     </div>

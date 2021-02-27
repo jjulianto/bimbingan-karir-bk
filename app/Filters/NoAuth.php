@@ -7,12 +7,14 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 use Config\Services;
 
-class AuthFilter implements FilterInterface
+class NoAuth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session('id')) {
-            return redirect()->to('/');
+        if (session()->get('log') && session()->get('role') == 'guru') {
+            return redirect()->to('/dashboard-guru');
+        } else if (session()->get('log') && session()->get('role') == 'siswa') {
+            return redirect()->to('/dashboard-siswa');
         }
     }
 

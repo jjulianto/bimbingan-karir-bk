@@ -67,7 +67,7 @@
                     <label for="exampleFormControlTextarea1">Alamat</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     <div class="invalid-feedback">
-                            Mohon pilih status anda!
+                        Mohon pilih status anda!
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
@@ -76,22 +76,22 @@
 </div>
 <?= $this->endSection(); ?>
 <?= $this->section('user'); ?>
-    /profile-guru
+/profile-guru
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Siswa
+List Siswa
 <?= $this->endSection(); ?>
 <?= $this->section('dashboard'); ?>
-    /dashboard-guru
+/dashboard-guru
 <?= $this->endSection(); ?>
 <?= $this->section('user'); ?>
-    /list-siswa
+/list-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>
-    /riwayat-konsultasi-guru
+/riwayat-konsultasi-guru
 <?= $this->endSection(); ?>
 <?= $this->section('profile'); ?>
-    /profile-guru
+/profile-guru
 <?= $this->endSection(); ?>
 <?= $this->section('more-js'); ?>
 <script>
@@ -108,6 +108,6 @@
         } else {
 
         }
-}
+    }
 </script>
 <?= $this->endSection(); ?>

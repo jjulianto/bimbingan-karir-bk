@@ -12,58 +12,58 @@
     <div class="row">
         <div class="col-xl-4 col-md-6 mb-4">
             <a href="/list-siswa" class="dashboard-card">
-            <div class="card border-left-primary shadow h-100 py-2" id="dashboard-card">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Jumlah Siswa</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">4 Siswa</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-user-friends fa-2x text-gray-300"></i>
+                <div class="card border-left-primary shadow h-100 py-2" id="dashboard-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Jumlah Siswa</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">4 Siswa</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-friends fa-2x text-gray-300"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </a>
         </div>
 
         <div class="col-xl-4 col-md-6 mb-4">
             <a href="/riwayat-konsultasi-guru" class="dashboard-card">
-            <div class="card border-left-success shadow h-100 py-2" id="dashboard-card">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Jumlah Konsultasi</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">3 Pesan</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                <div class="card border-left-success shadow h-100 py-2" id="dashboard-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Jumlah Konsultasi</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">3 Pesan</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </a>
         </div>
 
         <div class="col-xl-4 col-md-6 mb-4">
             <a href="/profile-guru" class="dashboard-card">
-            <div class="card border-left-warning shadow h-100 py-2" id="dashboard-card">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Profile</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Douglas McGee</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                <div class="card border-left-warning shadow h-100 py-2" id="dashboard-card">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Profile</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= session('nama'); ?></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user fa-2x text-gray-300"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </a>
         </div>
     </div>
@@ -120,17 +120,17 @@
 <!-- /.container-fluid -->
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Siswa
+List Siswa
 <?= $this->endSection(); ?>
 <?= $this->section('dashboard'); ?>
-    /dashboard-guru
+/dashboard-guru
 <?= $this->endSection(); ?>
 <?= $this->section('user'); ?>
-    /list-siswa
+/list-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>
-    /riwayat-konsultasi-guru
+/riwayat-konsultasi-guru
 <?= $this->endSection(); ?>
 <?= $this->section('profile'); ?>
-    /profile-guru
+/profile-guru
 <?= $this->endSection(); ?>
