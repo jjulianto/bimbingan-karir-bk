@@ -8,7 +8,6 @@ class UserModel extends Model
 {
     protected $table      = 'user';
     protected $primaryKey = 'id';
-    protected $returnType = "object";
 
     protected $allowedFields = ['id', 'nama', 'nip', 'nis', 'jenis_kelamin', 'kelas', 'jurusan', 'rombel', 'tanggal_lahir', 'gambar', 'alamat', 'no_telp', 'username', 'password', 'role', 'slug'];
 

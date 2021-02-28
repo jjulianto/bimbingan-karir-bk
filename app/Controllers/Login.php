@@ -53,6 +53,7 @@ class Login extends BaseController
                 session()->set('nip', $cek['nip']);
                 session()->set('nis', $cek['nis']);
                 session()->set('nama', $cek['nama']);
+                session()->set('gambar', $cek['gambar']);
                 session()->set('username', $cek['username']);
                 session()->set('password', $cek['password']);
                 session()->set('role', $cek['role']);

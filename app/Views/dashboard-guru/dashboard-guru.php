@@ -125,7 +125,7 @@ List Siswa
 <?= $this->section('dashboard'); ?>
 /dashboard-guru
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
+<?= $this->section('list-users'); ?>
 /list-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>

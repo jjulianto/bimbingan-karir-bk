@@ -21,24 +21,24 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputUserame">Username</label>
-                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly value="<?= session('username'); ?>">
+                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly value="<?= $user['username']; ?>">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly value="<?= session('password'); ?>">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly value="<?= $user['password']; ?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="exampleInputNis">NIS</label>
-                        <input type="number" class="form-control" id="exampleInputNis" aria-describedby="NIShelp" readonly value="<?= session('nis'); ?>">
+                        <input type="number" class="form-control" id="exampleInputNis" aria-describedby="NIShelp" readonly value="<?= $user['nis']; ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama" value="<?= session('nama'); ?>">
+                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama" value="<?= $user['nama']; ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
@@ -48,8 +48,12 @@
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="laki-laki">Laki-laki</option>
-                            <option value="perempuan">Perempuan</option>
+                            <option value="<?php if ($user['jenis_kelamin'] == "laki-laki") {
+                                                echo "selected";
+                                            } ?>">Laki-laki</option>
+                            <option value="<?php if ($user['jenis_kelamin'] == "perempuan") {
+                                                echo "selected";
+                                            } ?>">Perempuan</option>
                         </select>
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
@@ -67,27 +71,50 @@
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Jurusan</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="TEI">TEI</option>
-                            <option value="TOI">TOI</option>
-                            <option value="IOP">IOP</option>
-                            <option value="RPL">RPL</option>
-                            <option value="SIJA">SIJA</option>
-                            <option value="TPTU">TPTU</option>
-                            <option value="PFPT">PFPT</option>
-                            <option value="TEDK">TEDK</option>
-                            <option value="MEKA">MEKA</option>
+                            <option value="<?php if ($user['jurusan'] == "TEI") {
+                                                echo "selected";
+                                            } ?>">TEI</option>
+                            <option value="<?php if ($user['jurusan'] == "TOI") {
+                                                echo "selected";
+                                            } ?>">TOI</option>
+                            <option value="<?php if ($user['jurusan'] == "IOP") {
+                                                echo "selected";
+                                            } ?>">IOP</option>
+                            <option value="<?php if ($user['jurusan'] == "RPL") {
+                                                echo "selected";
+                                            } ?>">RPL</option>
+                            <option value="<?php if ($user['jurusan'] == "SIJA") {
+                                                echo "selected";
+                                            } ?>">SIJA</option>
+                            <option value="<?php if ($user['jurusan'] == "TPTU") {
+                                                echo "selected";
+                                            } ?>">TPTU</option>
+                            <option value="<?php if ($user['jurusan'] == "PFPT") {
+                                                echo "selected";
+                                            } ?>">PFPT</option>
+                            <option value="<?php if ($user['jurusan'] == "TEDK") {
+                                                echo "selected";
+                                            } ?>">TEDK</option>
+                            <option value="<?php if ($user['jurusan'] == "MEKA") {
+                                                echo "selected";
+                                            } ?>">MEKA</option>
                         </select>
-                        <div class="invalid-feedback">
-                            Mohon pilih status anda!
-                        </div>
                     </div>
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Kelas</label>
                         <select class="form-control" id="exampleFormControlSelect2">
-                            <option value="X">X</option>
-                            <option value="XI">XI</option>
-                            <option value="XII">XII</option>
-                            <option value="XIII">XIII</option>
+                            <option value="<?php if ($user['kelas'] == "X") {
+                                                echo "selected";
+                                            } ?>">X</option>
+                            <option value="<?php if ($user['kelas'] == "XI") {
+                                                echo "selected";
+                                            } ?>">XI</option>
+                            <option value="<?php if ($user['kelas'] == "XII") {
+                                                echo "selected";
+                                            } ?>">XII</option>
+                            <option value="<?php if ($user['kelas'] == "XIII") {
+                                                echo "selected";
+                                            } ?>">XIII</option>
                         </select>
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
@@ -96,9 +123,15 @@
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Rombel</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
+                            <option value="<?php if ($user['rombel'] == "A") {
+                                                echo "selected";
+                                            } ?>">A</option>
+                            <option value="<?php if ($user['rombel'] == "B") {
+                                                echo "selected";
+                                            } ?>">B</option>
+                            <option value="<?php if ($user['rombel'] == "C") {
+                                                echo "selected";
+                                            } ?>">C</option>
                         </select>
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
@@ -107,14 +140,14 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputNomor">Nomor Telepon</label>
-                    <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon" value="<?= session('no_telp'); ?>">
+                    <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon" value="<?= $user['no_telp']; ?>">
                     <div class="invalid-feedback">
                         Mohon pilih status anda!
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Alamat</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $user['alamat']; ?></textarea>
                     <div class="invalid-feedback">
                         Mohon pilih status anda!
                     </div>
@@ -130,7 +163,7 @@ List Guru
 <?= $this->section('dashboard'); ?>
 /dashboard-siswa
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
+<?= $this->section('list-users'); ?>
 /list-guru
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>

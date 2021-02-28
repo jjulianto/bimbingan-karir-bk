@@ -14,18 +14,18 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(4, 121, 255);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(5, 110, 230); 
+  background: rgb(5, 110, 230);
 }
 
 * {
@@ -68,7 +68,7 @@ html {
 }
 
 #loginBody p,
-#endBody p  {
+#endBody p {
   color: gray;
 }
 
@@ -236,7 +236,7 @@ img .profile {
   border-radius: 20px;
 }
 
-.search input[type=text] {
+.search input[type="text"] {
   padding: 8px 7px 8px 7px;
   font-size: 17px;
   border: none;
@@ -481,12 +481,6 @@ a.dashboard-card:hover {
   position: absolute;
   width: 100%;
   display: none;
-}
-
-input[readonly]{
-  background-color:transparent;
-  border: 0;
-  font-size: 1em;
 }
 
 /* on Mobile */

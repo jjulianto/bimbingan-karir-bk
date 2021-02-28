@@ -30,11 +30,11 @@
                         foreach ($user as $row) {
                         ?>
                             <tr>
-                                <td><?= $row->nis; ?></td>
-                                <td><?= $row->nama; ?></td>
-                                <td><?= $row->kelas; ?> <?= $row->jurusan; ?> <?= $row->rombel; ?></td>
-                                <td><?= $row->alamat; ?></td>
-                                <td><?= $row->no_telp; ?></td>
+                                <td><?= $row['nis']; ?></td>
+                                <td><?= $row['nama']; ?></td>
+                                <td><?= $row['kelas']; ?> <?= $row['jurusan']; ?> <?= $row['rombel']; ?></td>
+                                <td><?= $row['alamat']; ?></td>
+                                <td><?= $row['no_telp']; ?></td>
                                 <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                             </tr>
                         <?php
@@ -97,7 +97,7 @@ List Siswa
 <?= $this->section('dashboard'); ?>
 /dashboard-guru
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
+<?= $this->section('list-users'); ?>
 /list-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>

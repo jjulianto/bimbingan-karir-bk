@@ -30,7 +30,7 @@
     <li class="nav-item <?php if ($check == 'siswa') {
                             echo 'active';
                         } ?>">
-        <a class="nav-link" href="<?= $this->renderSection('user'); ?>">
+        <a class="nav-link" href="<?= $this->renderSection('list-users'); ?>">
             <i class="fas fa-fw fa-user-friends"></i>
             <span><?= $this->renderSection('list-user'); ?></span></a>
     </li>

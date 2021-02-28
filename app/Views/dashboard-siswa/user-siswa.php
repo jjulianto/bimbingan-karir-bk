@@ -92,7 +92,7 @@ List Guru
 <?= $this->section('dashboard'); ?>
 /dashboard-siswa
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
+<?= $this->section('list-users'); ?>
 /list-guru
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>

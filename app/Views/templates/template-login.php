@@ -39,7 +39,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
+    <!-- <script>
         $(".toggle-password").click(function() {
 
             $(this).toggleClass("fa-eye fa-eye-slash");
@@ -49,7 +49,7 @@
             } else {
                 input.attr("type", "password");
             }
-        });
+        }); -->
     </script>
 </body>
 

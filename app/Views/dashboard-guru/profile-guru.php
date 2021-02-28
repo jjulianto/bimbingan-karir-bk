@@ -21,24 +21,24 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputUserame">Username</label>
-                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly value="<?= session('username'); ?>">
+                        <input type="text" class="form-control" id="inputUserame" placeholder="Username" readonly value="<?= $user['username'] ?>">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly value="<?= session('password'); ?>">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" readonly value="<?= $user['password'] ?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="exampleInputNip">NIP</label>
-                        <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" readonly value="<?= session('nip'); ?>">
+                        <input type="number" class="form-control" id="exampleInputNip" aria-describedby="NIShelp" readonly value="<?= $user['nip'] ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama" value="<?= session('nama'); ?>">
+                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" readonly value="<?= $user['nama'] ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
@@ -48,8 +48,12 @@
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option value="laki-laki">Laki-laki</option>
-                            <option value="perempuan">Perempuan</option>
+                            <option <?php if ($user['jenis_kelamin'] == "laki-laki") {
+                                        echo "selected";
+                                    } ?>>Laki-Laki</option>
+                            <option <?php if ($user['jenis_kelamin'] == "perempuan") {
+                                        echo "selected";
+                                    } ?>>Perempuan</option>
                         </select>
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
@@ -57,7 +61,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="exampleInputNomor">Nomor Telepon</label>
-                        <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon" value="<?= session('no_telp'); ?>">
+                        <input type="number" class="form-control" id="exampleInpuNis" aria-describedby="NIShelp" placeholder="Masukkan Nomor Telepon" value="<?= $user['no_telp'] ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
@@ -65,7 +69,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Alamat</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $user['alamat'] ?></textarea>
                     <div class="invalid-feedback">
                         Mohon pilih status anda!
                     </div>
@@ -84,7 +88,7 @@ List Siswa
 <?= $this->section('dashboard'); ?>
 /dashboard-guru
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
+<?= $this->section('list-users'); ?>
 /list-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>
