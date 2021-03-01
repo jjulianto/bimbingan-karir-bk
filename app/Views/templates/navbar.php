@@ -362,20 +362,30 @@
     </div>
 </div> -->
 <!-- Modal -->
-<div class="modal modal-end fade" id="oneModal" tabindex="-1" aria-labelledby="oneModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" id="endContent">
-            <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
-                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+<div class="modal modal-nether fade" id="oneModal" tabindex="-1" aria-labelledby="oneModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="dialogNether">
+        <div class="modal-content" id="netherContent">
+            <div class="modal-header" id="netherHeader">
+                <h5 class="modal-title font-weight-bold mt-1" id="exampleModalLabel">Permintaan Konsultasi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body py-3" id="endBody">
-                <p>Apakah anda ingin menerima <br /> permintaan konsultasi ini?</p>
-                <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> No</button></a>
-                <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yes</button></a>
+            <div class="modal-body py-3" id="netherBody">
+                <div class="profile-modal mb-3">
+                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Cool" width="150">
+                </div>
+                <p>NIS : 181113837</p>
+                <p>Nama : Julianto</p>
+                <p>Kelas : XII RPL A</p>
+                <p>Alamat : Hujung Kulon</p>
+                <p>No.Telepon : 082119086814</p>
+                <p>Status : Siswa</p>
+                <p>Tanggal : 15 Desember 2020</p>
+                <div class="mt-3">
+                    <a href="#"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Tolak</button></a>
+                    <a href="/"><button type="button" class="btn btn-success"><i class="fas fa-check"></i> Setujui</button></a>
+                </div>
             </div>
         </div>
     </div>
@@ -400,19 +410,28 @@
     </div>
 </div>
 <!-- Modal -->
-<div class="modal modal-end fade" id="threeModal" tabindex="-1" aria-labelledby="threeModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" id="endContent">
-            <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
-                <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
+<div class="modal modal-overworld fade" id="threeModal" tabindex="-1" aria-labelledby="threeModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="dialogOverworld">
+        <div class="modal-content" id="overworldContent">
+            <div class="modal-header" id="overworldHeader">
+                <h5 class="modal-title font-weight-bold mt-1" id="exampleModalLabel">Penolakan Konsultasi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body py-3" id="endBody">
-                <p>Mohon maaf orang yang bersangkutan sedang tidak ingin diajak berkonsultasi. Mohon tunggu beberapa saat waktu <br /> untuk mengajaknya berkonsultasi.</p>
+            <div class="modal-body py-3" id="overworldBody">
+                <div class="img-modal mb-3">
+                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="Cool" width="150">
+                </div>
+                <p>NIS : 181113837</p>
+                <p>Nama : Julianto</p>
+                <p>Kelas : XII RPL A</p>
+                <p>Alamat : Hujung Kulon</p>
+                <p>No.Telepon : 082119086814</p>
+                <p>Status : Siswa</p>
+                <p>Tanggal : 15 Desember 2020</p>
             </div>
         </div>
     </div>
+</div>
 </div>

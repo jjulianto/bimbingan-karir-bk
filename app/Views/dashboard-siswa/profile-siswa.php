@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" placeholder="Masukkan Nama" value="<?= $user['nama']; ?>">
+                        <input type="text" class="form-control" id="nama" aria-describedby="NIShelp" readonly value="<?= $user['nama']; ?>">
                         <div class="invalid-feedback">
                             Mohon pilih status anda!
                         </div>
@@ -47,7 +47,7 @@
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" readonly>
                             <option value="<?php if ($user['jenis_kelamin'] == "laki-laki") {
                                                 echo "selected";
                                             } ?>">Laki-laki</option>
@@ -55,22 +55,16 @@
                                                 echo "selected";
                                             } ?>">Perempuan</option>
                         </select>
-                        <div class="invalid-feedback">
-                            Mohon pilih status anda!
-                        </div>
                     </div>
                     <div class="form-group col">
                         <label for="exampleInputDate">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="exampleInputDate" aria-describedby="NIShelp">
-                        <div class="invalid-feedback">
-                            Mohon pilih status anda!
-                        </div>
+                        <input type="date" class="form-control" id="exampleInputDate" aria-describedby="NIShelp" readonly value="<?= $user['tanggal_lahir']; ?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Jurusan</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" readonly>
                             <option value="<?php if ($user['jurusan'] == "TEI") {
                                                 echo "selected";
                                             } ?>">TEI</option>
@@ -102,7 +96,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Kelas</label>
-                        <select class="form-control" id="exampleFormControlSelect2">
+                        <select class="form-control" id="exampleFormControlSelect2" readonly>
                             <option value="<?php if ($user['kelas'] == "X") {
                                                 echo "selected";
                                             } ?>">X</option>
@@ -122,7 +116,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="exampleFormControlSelect1">Rombel</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" readonly>
                             <option value="<?php if ($user['rombel'] == "A") {
                                                 echo "selected";
                                             } ?>">A</option>

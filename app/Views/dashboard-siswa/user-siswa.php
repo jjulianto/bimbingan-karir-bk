@@ -29,10 +29,10 @@
                         foreach ($user as $row) {
                         ?>
                             <tr>
-                                <td><?= $row->nip; ?></td>
-                                <td><?= $row->nama; ?></td>
-                                <td><?= $row->alamat; ?></td>
-                                <td><?= $row->no_telp; ?></td>
+                                <td><?= $row['nip']; ?></td>
+                                <td><?= $row['nama']; ?></td>
+                                <td><?= $row['alamat']; ?></td>
+                                <td><?= $row['no_telp']; ?></td>
                                 <td><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#twoModal"><i class="fas fa-comments mr-1"></i>Konsultasi</button></td>
                             </tr>
                         <?php
@@ -64,6 +64,7 @@
             </div>
         </div>
     </div>
+    <p style="margin-bottom: 15rem;"></p>
 </div>
 <!-- Modal -->
 <div class="modal modal-end fade" id="twoModal" tabindex="-1" aria-labelledby="twoModal" aria-hidden="true">

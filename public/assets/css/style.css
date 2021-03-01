@@ -39,8 +39,20 @@ html {
 .modal-login,
 #loginContent,
 .modal-end,
-#endContent {
+#endContent,
+.modal-nether,
+#netherContent,
+.modal-overworld,
+#overworldContent {
   border-radius: 20px;
+}
+
+#dialogNether {
+  max-width: 25%;
+}
+
+#dialogOverworld {
+  max-width: 23%;
 }
 
 #loginHeader,
@@ -62,8 +74,9 @@ html {
   right: 17px;
 }
 
-#loginBody,
-#endBody {
+#endBody,
+#netherBody,
+#overworldBody {
   text-align: center;
 }
 
@@ -75,6 +88,23 @@ html {
 #loginBody button,
 #endBody button {
   width: 200px;
+}
+
+#netherBody button {
+  width: 150px;
+}
+
+.profile-modal {
+  text-align: center;
+}
+
+/* #netherBody p {
+  font-size: 20px;
+} */
+
+.nether-button {
+  width: 200px;
+  text-align: center !important;
 }
 
 /* Modal Konsultasi */
@@ -116,6 +146,12 @@ img .profile {
   margin-left: 10px;
   font-size: 16px;
   color: #fff;
+}
+
+.name-modal p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .header-icons {
@@ -439,6 +475,7 @@ a.dashboard-card:hover {
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  margin-bottom: 3rem;
 }
 #profile-upload {
   background-image: url("../images/default.png");
