@@ -26,7 +26,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        foreach ($user as $row) {
+                        foreach ($users as $row) {
                         ?>
                             <tr>
                                 <td><?= $row['nip']; ?></td>

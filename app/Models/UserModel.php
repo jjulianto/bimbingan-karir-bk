@@ -13,4 +13,11 @@ class UserModel extends Model
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+
+    public function edit_data($id,$data)
+    {
+        $query = $this->db->table($this->table)->update($data, array('id' => $id));
+        return $query;
+    }
 }

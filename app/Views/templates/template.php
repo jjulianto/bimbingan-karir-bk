@@ -90,6 +90,24 @@
             }
         });
     </script> -->
+    <script>
+        function previewImg() {
+            const sampul = document.querySelector('#sampul');
+            const sampulLabel = document.querySelector('.custom-file-label');
+            const imgPreview = document.querySelector('.sampul');
+
+            //Mengubah nama label
+            sampulLabel.textContent = sampul.files[0].name;
+
+            //Mengubah image preview
+            const fileSampul = new FileReader();
+            fileSampul.readAsDataURL(sampul.files[0]);
+
+            fileSampul.onload = function(e) {
+                imgPreview.src = e.target.result;
+            }
+        }
+    </script>
     <?= $this->renderSection('more-js'); ?>
 </body>
 

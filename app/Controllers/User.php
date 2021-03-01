@@ -14,6 +14,9 @@ class User extends BaseController
 
     public function guru()
     {
+        $data = [];
+		helper(['form']);
+		$model = new UserModel();
         if (session()->get('role') == 'siswa') {
             return redirect()->to('/dashboard-siswa');
         }
@@ -22,12 +25,16 @@ class User extends BaseController
             'check' => 'siswa',
             'user'  => 'guru'
         ];
-        $data['user'] = $this->UserModel->where('role', 'siswa')->findAll();
+        $data['users'] = $this->UserModel->where('role', 'siswa')->findAll();
+        $data['user'] = $model->where('id', session()->get('id'))->first();
         return view('dashboard-guru/user-guru', $data);
     }
 
     public function siswa()
     {
+        $data = [];
+		helper(['form']);
+		$model = new UserModel();
         if (session()->get('role') == 'guru') {
             return redirect()->to('/dashboard-guru');
         }
@@ -36,7 +43,8 @@ class User extends BaseController
             'check' => 'siswa',
             'user'  => 'siswa'
         ];
-        $data['user'] = $this->UserModel->where('role', 'guru')->findAll();
+        $data['users'] = $this->UserModel->where('role', 'guru')->findAll();
+        $data['user'] = $model->where('id', session()->get('id'))->first();
         return view('dashboard-siswa/user-siswa', $data);
     }
 
