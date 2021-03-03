@@ -9,7 +9,7 @@ var myPieChart = new Chart(ctx, {
   data: {
     labels: ["Tingkat 10", "Tingkat 11", "Tingkat 12", "Tingkat 13"],
     datasets: [{
-      data: [12, 20, 15, 8],
+      data: [4, 3, 2, 2],
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#e6b332'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",

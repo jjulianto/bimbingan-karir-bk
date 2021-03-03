@@ -18,7 +18,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Jumlah Siswa</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">4 Siswa</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">11 Siswa</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-user-friends fa-2x text-gray-300"></i>

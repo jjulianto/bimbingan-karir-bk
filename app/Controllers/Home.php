@@ -6,6 +6,12 @@ use App\Models\UserModel;
 
 class Home extends BaseController
 {
+	protected $UserModel;
+	public function __construct()
+	{
+		$this->UserModel = new UserModel();
+	}
+
 	public function guru()
 	{
 		$data = [];
