@@ -12,7 +12,10 @@
 
             </div>
             <div class="form">
-                <form action="#" method="post">
+            <?php 
+                echo form_open('login/auth');
+            ?>
+                <form action="" method="post">
                     <div class="text-center">
                         <label class="text-login text-uppercase">Login Form</label>
                     </div>
@@ -20,20 +23,23 @@
                         <i class="fa fa-user icon"></i>
                         <input type="text" class="form-control input-login" name="username" autocomplete="off" required placeholder="Username">
                     </div>
-                    <!-- <div class="input-icon invalid-feedback col-12" id="status">
-                        Mohon pilih status anda!
-                    </div> -->
+                    <div class="input-icon invalid-feedback col-12">
+                        <?= session()->getFlashdata('pesan') ?>
+                    </div>
 
                     <div class="input-icon mt-3">
                         <i class="fa fa-lock icon"></i>
                         <input type="password" class="form-control input-login" name="password" autocomplete="off" required placeholder="Password" id="password-field">
-                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        <!-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> -->
                     </div>
-                    <!-- <div class="input-icon invalid-feedback col-12" id="status">
-                        Mohon pilih status anda!
-                    </div> -->
+                    <div class="input-icon invalid-feedback col-12">
+                        <?= session()->getFlashdata('pesan') ?>
+                    </div>
                     <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Login</button>
                 </form>
+                <?php 
+                    echo form_close();
+                ?>
             </div>
         </div>
     </div>

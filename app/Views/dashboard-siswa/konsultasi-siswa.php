@@ -64,6 +64,20 @@
             </div>
         </div>
     </div>
+    <div class="row mb-4">
+        <div class="col-md-12 card-konten">
+            <div class="item">
+                <div class="featured-image mb-3">
+                    <img src="<?= base_url(); ?>/assets-dashboard/img/undraw_profile_3.svg" alt="This is a cool picture" />
+                </div>
+                <div class="description">
+                    <h5 class="font-weight-bold">Senku Ishigami</h5>
+                    <p class="text-muted">Tanggal : 08 July 2020</p>
+                    <span class="badge status badge-danger"> Belum Selesai</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="modal modal-konsultasi fade" id="chattingModal2" tabindex="-1" aria-labelledby="chattingModal2" aria-hidden="true">
@@ -79,7 +93,7 @@
                 <div class="header-icons">
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v"></i>  
+                            <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" data-dismiss="modal" data-toggle="modal" href="#" data-target="#endModal">
@@ -121,7 +135,7 @@
                                 </div>
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
-                                         <p>Ada apa di waktu hari ini?</p>
+                                        <p>Ada apa di waktu hari ini?</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +167,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="endContent">
             <div class="modal-header" id="endHeader">
-                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40"/>
+                <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="40" />
                 <h5 class="modal-title font-weight-bold mt-2" id="exampleModalLabel">BK SMKN 1 CIMAHI</h5>
                 <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#chattingModal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -169,7 +183,7 @@
 </div>
 <?= $this->endSection(); ?>
 <?= $this->section('list-user'); ?>
-    List Guru
+List Guru
 <?= $this->endSection(); ?>
 <?= $this->section('search-button'); ?>
 <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -193,17 +207,17 @@
 </li>
 <?= $this->endSection(); ?>
 <?= $this->section('dashboard'); ?>
-    /dashboard-siswa
+/dashboard-siswa
 <?= $this->endSection(); ?>
-<?= $this->section('user'); ?>
-    /list-guru
+<?= $this->section('list-users'); ?>
+/list-guru
 <?= $this->endSection(); ?>
 <?= $this->section('konsultasi'); ?>
-    /riwayat-konsultasi-siswa
+/riwayat-konsultasi-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('profile'); ?>
-    /profile-siswa
+/profile-siswa
 <?= $this->endSection(); ?>
 <?= $this->section('chat-message'); ?>
-    #chattingModal2
+#chattingModal2
 <?= $this->endSection(); ?>

@@ -4,7 +4,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-            <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="45"/>
+            <img src="<?= base_url(); ?>/assets/images/logo-bk.png" alt="BK Logo" width="45" />
         </div>
         <div class="sidebar-brand-text mx-3">BK SMKN 1 Cimahi</div>
     </a>
@@ -18,28 +18,36 @@
     </div>
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item <?php if($check=='dashboard'){echo 'active';}?>">
+    <li class="nav-item <?php if ($check == 'dashboard') {
+                            echo 'active';
+                        } ?>">
         <a class="nav-link" href="<?= $this->renderSection('dashboard'); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
 
     <!-- Nav Item - User -->
-    <li class="nav-item <?php if($check=='siswa'){echo 'active';}?>">
-        <a class="nav-link" href="<?= $this->renderSection('user'); ?>">
+    <li class="nav-item <?php if ($check == 'siswa') {
+                            echo 'active';
+                        } ?>">
+        <a class="nav-link" href="<?= $this->renderSection('list-users'); ?>">
             <i class="fas fa-fw fa-user-friends"></i>
             <span><?= $this->renderSection('list-user'); ?></span></a>
     </li>
 
     <!-- Nav Item - Konsultasi -->
-    <li class="nav-item <?php if($check=='konsultasi'){echo 'active';}?>">
+    <li class="nav-item <?php if ($check == 'konsultasi') {
+                            echo 'active';
+                        } ?>">
         <a class="nav-link" href="<?= $this->renderSection('konsultasi'); ?>">
             <i class="fas fa-fw fa-comments"></i>
             <span>Konsultasi</span></a>
     </li>
 
     <!-- Nav Item - Profile -->
-    <li class="nav-item <?php if($check=='profile'){echo 'active';}?>">
+    <li class="nav-item <?php if ($check == 'profile') {
+                            echo 'active';
+                        } ?>">
         <a class="nav-link" href="<?= $this->renderSection('profile'); ?>">
             <i class="fas fa-fw fa-user"></i>
             <span>Profile</span></a>
@@ -55,14 +63,14 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+        <a class="nav-link" href="/login/logout">
             <i class="fas fa-fw fa-sign-out-alt"></i>
             <span>Logout</span></a>
     </li>
 </ul>
 <!-- End of Sidebar -->
 <!-- Logout Modal -->
-<div class="modal modal-login fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
+<!-- <div class="modal modal-login fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" id="loginContent">
             <div class="modal-header" id="loginHeader">
@@ -79,4 +87,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

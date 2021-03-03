@@ -14,18 +14,18 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(4, 121, 255);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(5, 110, 230); 
+  background: rgb(5, 110, 230);
 }
 
 * {
@@ -39,8 +39,20 @@ html {
 .modal-login,
 #loginContent,
 .modal-end,
-#endContent {
+#endContent,
+.modal-nether,
+#netherContent,
+.modal-overworld,
+#overworldContent {
   border-radius: 20px;
+}
+
+#dialogNether {
+  max-width: 25%;
+}
+
+#dialogOverworld {
+  max-width: 23%;
 }
 
 #loginHeader,
@@ -62,19 +74,37 @@ html {
   right: 17px;
 }
 
-#loginBody,
-#endBody {
+#endBody,
+#netherBody,
+#overworldBody {
   text-align: center;
 }
 
 #loginBody p,
-#endBody p  {
+#endBody p {
   color: gray;
 }
 
 #loginBody button,
 #endBody button {
   width: 200px;
+}
+
+#netherBody button {
+  width: 150px;
+}
+
+.profile-modal {
+  text-align: center;
+}
+
+/* #netherBody p {
+  font-size: 20px;
+} */
+
+.nether-button {
+  width: 200px;
+  text-align: center !important;
 }
 
 /* Modal Konsultasi */
@@ -116,6 +146,12 @@ img .profile {
   margin-left: 10px;
   font-size: 16px;
   color: #fff;
+}
+
+.name-modal p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .header-icons {
@@ -236,7 +272,7 @@ img .profile {
   border-radius: 20px;
 }
 
-.search input[type=text] {
+.search input[type="text"] {
   padding: 8px 7px 8px 7px;
   font-size: 17px;
   border: none;
@@ -439,9 +475,9 @@ a.dashboard-card:hover {
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  margin-bottom: 3rem;
 }
-#profile-upload {
-  background-image: url("../images/default.png");
+.sampul {
   background-size: cover;
   background-position: center;
   height: 160px;
@@ -452,35 +488,8 @@ a.dashboard-card:hover {
   border-radius: 50%;
   overflow: hidden;
   float: left;
-  margin-right: 30px;
-  margin-bottom: 0px;
-}
-#profile-upload:hover input.upload {
-  display: block;
-}
-#profile-upload:hover {
-  border: 1px solid gray;
-}
-#profile-upload:hover .hvr-profile-img {
-  opacity: 1;
-}
-.hvr-profile-img {
-  opacity: 0.3;
-}
-
-#profile-upload input.upload {
-  z-index: 1;
-  left: 0;
-  margin: 0;
-  bottom: 0;
-  top: 0;
-  padding: 0;
-  opacity: 0;
-  outline: none;
-  cursor: pointer;
-  position: absolute;
-  width: 100%;
-  display: none;
+  margin-left: 40px;
+  margin-bottom: 2rem;
 }
 
 /* on Mobile */
